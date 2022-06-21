@@ -18,9 +18,9 @@ const AccessToken = twilio.jwt.AccessToken;
 const VideoGrant = AccessToken.VideoGrant;
 const PlaybackGrant = AccessToken.PlaybackGrant;
 
-const accountSid = "AC7155104fcca6cfe81485fcbf9e9e2be6";
-const apiKey = "SKcc19af07dce5dfcbfc76c3b0d3c5d96a";
-const apiKeySecret = "EjvrIZDFSSBj9jMazFZclResdqF5dOj7";
+const accountSid = process.env.ACCOUNT_SID;
+const apiKey = process.env.API_KEY;
+const apiKeySecret = process.env.API_KEY_SECRET;
 
 const twilioClient = twilio(apiKey, apiKeySecret, { accountSid: accountSid });
 
